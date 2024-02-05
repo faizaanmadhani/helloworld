@@ -1,8 +1,8 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Build Maven
+run-name: Compile Jar file
 on: [push]
 jobs:
-  Build-Jar-File:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -13,4 +13,4 @@ jobs:
           distribution: 'temurin'
           architecture: x64
       - name: Build Using Maven
-      - run: mvn compile helloworld
+          run: mvn compile helloworld
