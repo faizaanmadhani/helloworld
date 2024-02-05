@@ -13,4 +13,4 @@ jobs:
           distribution: 'temurin'
           architecture: x64
       - name: Build Using Maven
-        run: mvn compile
+        run: mvn -B package --file pom.xml
